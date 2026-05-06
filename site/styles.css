@@ -1,0 +1,331 @@
+/* ============================================================
+   FirstGen — shared stylesheet
+   The Software Developer designated as "stylesheet steward" owns this file.
+   Everyone else: don't touch directly. Ask the steward.
+   This is a STARTER. Replace tokens, palette, type with what your team decides.
+   ============================================================ */
+
+:root {
+  /* Colour tokens — replace with your team's palette */
+  --colour-ink: #1a1a2e;
+  --colour-paper: #fdfcfb;
+  --colour-warm: #f4a261;
+  --colour-trust: #2a9d8f;
+  --colour-quiet: #e9ecef;
+  --colour-secondary: #555;
+  --colour-muted: #888;
+  --colour-warm-hover: #e08d44;
+
+  /* Type tokens */
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Spacing */
+  --gap-s: 0.75rem;
+  --gap-m: 1.5rem;
+  --gap-l: 3rem;
+  --gap-xl: 6rem;
+
+  /* Layout */
+  --max-width: 1100px;
+  --radius: 12px;
+}
+
+/* On narrow viewports (mobile, and importantly the dashboard's
+   live-preview iframe) compress the gap tokens so 96px-tall vertical
+   padding doesn't swallow a full screen of whitespace per section. The
+   wide-viewport rhythm is preserved on the actual deployed site. */
+@media (max-width: 900px) {
+  :root {
+    --gap-l: 1.5rem;
+    --gap-xl: 3rem;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--colour-ink);
+  background: var(--colour-paper);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 var(--gap-m);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+p  { margin: 0 0 var(--gap-m); font-size: 1.0625rem; }
+
+a { color: var(--colour-trust); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Wrap the brand and nav onto separate lines on narrow viewports
+     (e.g. the dashboard's live-preview iframe). Without this, the 7
+     nav links wrap inside the nav while the brand stays single-line,
+     which leaves the "Join" pill floating mid-air next to the brand. */
+  flex-wrap: wrap;
+  gap: var(--gap-s);
+  padding: var(--gap-m) var(--gap-l);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--colour-ink);
+}
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* Match the previous per-link `margin-left: var(--gap-m)` rhythm at
+     wide widths, while wrapping cleanly without orphaned margins on
+     the second line at narrow widths. */
+  gap: var(--gap-m);
+}
+.site-header nav a { color: var(--colour-ink); }
+.cta-link {
+  background: var(--colour-ink);
+  color: var(--colour-paper) !important;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-l);
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+}
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; padding: var(--gap-l); }
+}
+.lede { font-size: 1.25rem; color: var(--colour-secondary); }
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  background: var(--colour-warm);
+  color: var(--colour-ink);
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+.cta:hover { background: var(--colour-warm-hover); text-decoration: none; }
+
+/* Content sections */
+.content-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+}
+.content-section.alt {
+  background: var(--colour-quiet);
+  max-width: none;
+  /* The calc lets the alt band extend full-bleed at wide widths while
+     keeping inner content aligned to the same 1100px rail as the
+     non-alt sections. max() clamps the padding to at least --gap-l on
+     narrow viewports (e.g. the dashboard's live-preview iframe), where
+     the calc would otherwise go negative and bleed cards to the edge. */
+  padding: var(--gap-xl) max(var(--gap-l), calc((100vw - var(--max-width)) / 2 + var(--gap-l)));
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap-m);
+}
+.feature-list li {
+  background: var(--colour-paper);
+  border: 1px solid var(--colour-quiet);
+  padding: var(--gap-m);
+  border-radius: var(--radius);
+}
+
+/* CTA section */
+.cta-section {
+  text-align: center;
+  padding: var(--gap-xl) var(--gap-l);
+  background: var(--colour-ink);
+  color: var(--colour-paper);
+}
+.cta-section a { color: var(--colour-paper); }
+
+footer {
+  text-align: center;
+  padding: var(--gap-m);
+  font-size: 0.875rem;
+  color: var(--colour-muted);
+}
+
+/* ============================================================
+   Section additions — placeholders for every role.
+   Steward: tighten or replace as the team's design lands.
+   ============================================================ */
+
+.section-lede {
+  color: var(--colour-secondary);
+  font-size: 1rem;
+  margin-bottom: var(--gap-l);
+}
+
+/* By the numbers (Researcher) */
+.numbers-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap-m);
+}
+.stat-card {
+  background: var(--colour-paper);
+  border: 1px solid var(--colour-quiet);
+  border-radius: var(--radius);
+  padding: var(--gap-m);
+}
+.stat-figure {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--colour-trust);
+  line-height: 1;
+  margin-bottom: var(--gap-s);
+}
+.stat-label { font-size: 1rem; margin-bottom: var(--gap-s); }
+.stat-source { font-size: 0.8125rem; color: var(--colour-muted); }
+
+/* Voices */
+.voices-section {
+  background: var(--colour-quiet);
+  /* Same clamp pattern as .content-section.alt — without max(), the
+     calc evaluates to a negative number on narrow viewports and the
+     voice cards bleed to the iframe's edges in the live preview. */
+  padding: var(--gap-xl) max(var(--gap-l), calc((100vw - var(--max-width)) / 2 + var(--gap-l)));
+}
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap-m);
+}
+.voice-card {
+  background: var(--colour-paper);
+  border-radius: var(--radius);
+  padding: var(--gap-m);
+  margin: 0;
+}
+.voice-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--gap-s);
+}
+.voice-card blockquote {
+  margin: 0 0 var(--gap-s);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.voice-card figcaption { font-size: 0.875rem; color: var(--colour-secondary); }
+
+/* Meet a buddy */
+.buddy-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+}
+.buddy-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--gap-l);
+  align-items: center;
+  background: var(--colour-paper);
+  border: 1px solid var(--colour-quiet);
+  border-radius: var(--radius);
+  padding: var(--gap-l);
+}
+@media (max-width: 600px) {
+  .buddy-card { grid-template-columns: 1fr; }
+}
+.buddy-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.buddy-bio h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.buddy-meta { color: var(--colour-secondary); margin-bottom: var(--gap-s); font-size: 0.9375rem; }
+
+/* Resources (Researcher) */
+.resource-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--gap-s);
+}
+.resource-list li {
+  background: var(--colour-paper);
+  border: 1px solid var(--colour-quiet);
+  border-radius: var(--radius);
+  padding: var(--gap-m);
+}
+
+/* Built with care (A11y) */
+.access-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+  text-align: center;
+}
+
+/* Built by (Coordinator) */
+.team-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--gap-l);
+  text-align: center;
+}
+.team-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap-s);
+  text-align: left;
+}
+.team-list li {
+  background: var(--colour-paper);
+  border: 1px solid var(--colour-quiet);
+  border-radius: var(--radius);
+  padding: var(--gap-s) var(--gap-m);
+  font-size: 0.9375rem;
+}

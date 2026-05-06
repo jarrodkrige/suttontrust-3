@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FirstGen — placeholder title</title>
+  <meta name="description" content="Placeholder description — the team to replace with their pitch." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    🚧 STARTER SHELL — your team will reshape this. Software Developers own the shell mechanics.
+
+    HOW THIS WORKS:
+      • Each <section> below has an HTML comment marked `ROLE:` naming the role group(s)
+        whose contributions land there. You don't have to wait your turn — just commit your
+        work into your role folder; the agent reasons about the best home for it.
+      • You drop a file in contributions/<your-role>[-N]/. You push. The Factory Agent
+        integrates it. (READMEs in those folders are briefs FOR YOU — the agent ignores them
+        and reads your actual files.)
+      • The Agent will GROW this page to fit the team's ideas — adding stat cards, voice
+        quotes, even whole new sections (see GROW ROOM at the bottom of <main>).
+      • The Agent will REMOVE empty sections on the FINAL ship-it pass when no one
+        contributed. During the live hour, anchors stay in place so late contributions still
+        have a home.
+      • When multiple teammates contribute to the same area, the agent picks the clearest
+        primary version and weaves in other useful contributions where they strengthen the
+        page — alternatives only surface separately when they add distinct value.
+
+    ROLE PLAYBOOK (drop your file in contributions/<your-role>[-N]/, push, Factory Agent wires it in):
+      • Software Developers
+          Own the SHELL: page structure, palette + type in styles.css, new sections, layout
+          mechanics. They unlock the flexibility — when copywriters write more than the
+          template has slots for, an SWD proposal says "make room"; when a section has no
+          contributor, an SWD proposal says "drop it on ship-it."
+      • Project Coordinator
+          Owns the FLOW + STORY: which sections matter, in what order, what's emphasised.
+          When SWD and PC disagree, the agent follows the Project Coordinator's flow and
+          adapts the shell to fit.
+      • Visual Designers ......... hero, secondary imagery, portraits, dividers, icons
+      • Copywriters .............. headline, lede, body copy, microcopy
+      • Researchers .............. stats, real student quotes, trustworthy links
+      • Pitch Lead(s) ............ final CTA copy, sign-up flow words, closing line
+      • Accessibility Champion(s)  alt text, focus states, contrast, "Built with care"
+  -->
+
+  <header class="site-header">
+    <a class="brand" href="#">FirstGen</a>
+    <nav>
+      <a href="#what">What is it?</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#who">Who's it for?</a>
+      <a href="#voices">Voices</a>
+      <a href="#how">How it helps</a>
+      <a href="#buddy">Meet a buddy</a>
+      <a href="#join" class="cta-link">Join</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--
+      META — STRUCTURE AUTHORITY (NON-RENDERED, NOT A CONTENT SLOT)
+      Software Developers own this file's STRUCTURE.
+      Their proposals (palette.md, layout-ideas.md, page-structure.md, refactor-requests.md,
+      component-snippets/) authorize the agent to:
+        • change section order, hero proportions, grid layout
+        • update CSS variables in styles.css to match the agreed palette + type
+        • lift HTML/CSS snippets from component-snippets/ into the page
+        • ADD a new semantic section to absorb contributions that don't fit existing slots
+        • on the FINAL ship-it pass only: REMOVE sections still empty + only-placeholder
+      Authority split:
+        • Project Coordinator sets the FLOW + STORY (which sections, in what order, emphasis).
+        • Software Developers implement the SHELL mechanics (markup, palette, grid, snippets).
+        • If they conflict, follow the Project Coordinator's flow; SWD adapts the shell to fit.
+      Always keep the <header><nav> in sync with the sections that actually exist.
+      DO NOT render this META block as visible content. DO NOT dump SWD proposal markdown
+      into the page as a section.
+    -->
+
+    <!--
+      ROLE: Visual Designers — hero image (any designer's hero is welcome).
+            Copywriters — headline + lede.
+            Pitch Lead(s) — CTA copy.
+            Software Developers — hero proportions / mobile layout.
+      During incremental passes: leave the hero structure in place even if no contribution
+      yet. On ship-it: if the headline is still placeholder and no copywriter contributed,
+      swap to a sensible warm default. If no hero image, drop only the .hero-image div.
+    -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Your headline here.</h1>
+        <p class="lede">
+          The lede goes here — one or two sentences from the Copywriting team that say what FirstGen is, in the team's own voice.
+        </p>
+        <a class="cta" href="#join">Call to action →</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero.png" alt="" onerror="this.style.display='none'" />
+      </div>
+    </section>
+
+    <!--
+      ROLE: Researchers — stats + sources.
+            Visual Designers — optional small icon per stat.
+      Card count is FLEXIBLE: grow the grid to absorb 4+ stats; shrink to match what's there.
+      During incremental passes: leave anchors. On ship-it: if no researcher contributed and
+      figures are still "— —", drop the whole #numbers section (and its nav link).
+    -->
+    <section id="numbers" class="numbers-section">
+      <h2>By the numbers</h2>
+      <p class="section-lede">Researchers: replace these with real figures and a source link under each.</p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-figure">— —</div>
+          <div class="stat-label">A relevant statistic about first-gen students.</div>
+          <div class="stat-source">Source: add link</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-figure">— —</div>
+          <div class="stat-label">A relevant statistic about first-gen students.</div>
+          <div class="stat-source">Source: add link</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-figure">— —</div>
+          <div class="stat-label">A relevant statistic about first-gen students.</div>
+          <div class="stat-source">Source: add link</div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ROLE: Copywriters — "what FirstGen is" paragraph.
+      On ship-it: if no copywriter contributed and the paragraph is still placeholder, drop
+      the section (and its nav link).
+    -->
+    <section id="what" class="content-section">
+      <h2>What FirstGen is</h2>
+      <p>Copywriters: a short paragraph in the team's voice about what FirstGen is.</p>
+    </section>
+
+    <!--
+      ROLE: Copywriters — "who it's for" paragraph.
+      On ship-it: if still placeholder, drop the section (and its nav link).
+    -->
+    <section id="who" class="content-section alt">
+      <h2>Who it's for</h2>
+      <p>Copywriters: a short paragraph in the team's voice about who FirstGen is for.</p>
+    </section>
+
+    <!--
+      ROLE: Researchers — real quotes.
+            Visual Designers — optional portraits / illustrations per voice.
+      Card count is FLEXIBLE — grow or shrink the grid to match the number of quotes.
+      On ship-it: if no quotes contributed, drop the whole #voices section (and its nav link).
+    -->
+    <section id="voices" class="voices-section">
+      <h2>Voices</h2>
+      <p class="section-lede">Researchers: drop in real quotes from FirstGen students. Designers: optional portraits.</p>
+      <div class="voice-grid">
+        <figure class="voice-card">
+          <img src="assets/voice-1.png" alt="" onerror="this.style.display='none'" />
+          <blockquote>"A real quote goes here."</blockquote>
+          <figcaption>Name, course, university</figcaption>
+        </figure>
+        <figure class="voice-card">
+          <img src="assets/voice-2.png" alt="" onerror="this.style.display='none'" />
+          <blockquote>"Another real quote goes here."</blockquote>
+          <figcaption>Name, course, university</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!--
+      ROLE: Copywriters — the "how it helps" lines.
+            Visual Designers — optional small icon per item.
+      List length is FLEXIBLE — 2-6 items grow the list. On ship-it: if still placeholder,
+      drop the section (and its nav link).
+    -->
+    <section id="how" class="content-section">
+      <h2>How it helps</h2>
+      <ul class="feature-list">
+        <li><strong>Point one.</strong> A short line from the Copywriting team.</li>
+        <li><strong>Point two.</strong> A short line from the Copywriting team.</li>
+        <li><strong>Point three.</strong> A short line from the Copywriting team.</li>
+      </ul>
+    </section>
+
+    <!--
+      ROLE: Copywriters — buddy bio.
+            Visual Designers — buddy portrait.
+      The buddy section is OPTIONAL flavour. On ship-it: only keep if there's a real bio
+      and/or portrait — otherwise drop (and remove the nav link).
+    -->
+    <section id="buddy" class="buddy-section">
+      <h2>Meet a buddy</h2>
+      <div class="buddy-card">
+        <img class="buddy-photo" src="assets/buddy.png" alt="" onerror="this.style.display='none'" />
+        <div class="buddy-bio">
+          <h3>Buddy name</h3>
+          <p class="buddy-meta">Course • Year • University</p>
+          <p>Copywriters: a short paragraph in the buddy's own voice — what they wish they'd known, what they help with.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ROLE: Researchers — trustworthy links.
+      List length is FLEXIBLE — grow or shrink. On ship-it: if still placeholder, drop the
+      section.
+    -->
+    <section id="resources" class="content-section alt">
+      <h2>Resources we trust</h2>
+      <ul class="resource-list">
+        <li><a href="#">Add a real link</a> — what it covers in one line.</li>
+        <li><a href="#">Add a real link</a> — what it covers in one line.</li>
+        <li><a href="#">Add a real link</a> — what it covers in one line.</li>
+      </ul>
+    </section>
+
+    <!--
+      ROLE: Pitch Lead(s) — the closing words.
+    -->
+    <section id="join" class="cta-section">
+      <h2>Closing line.</h2>
+      <p>Pitch Lead: the closing words that get someone to act.</p>
+      <a class="cta" href="#">Call to action →</a>
+    </section>
+
+    <!--
+      ROLE: Accessibility Champion(s) — the team's promise about access.
+      On ship-it: if no a11y champion contributed copy here, drop this section but KEEP any
+      practical a11y improvements they made elsewhere (alt text, focus styles, contrast).
+    -->
+    <section id="access" class="access-section">
+      <h2>Built with care</h2>
+      <p>Accessibility Champion: a short note about how this site treats everyone.</p>
+    </section>
+
+    <!--
+      ROLE: Project Coordinator for team roll-call + tagline.
+      Team list reflects ONLY the roles that had a contributor on this rotation — drop rows
+      for absent roles, add rows for any extra instance who showed up. The Coordinator's
+      team-plan.md is also the FLOW source of truth: section order on this page should
+      reflect the plan they committed.
+    -->
+    <section id="team" class="team-section">
+      <h2>Built by</h2>
+      <p class="section-lede">Coordinator: replace with your team's tagline + roll-call.</p>
+      <ul class="team-list">
+        <li>Project Coordinator — name</li>
+        <li>Software Developers — names</li>
+        <li>Visual Designers — names</li>
+        <li>Copywriters — names</li>
+        <li>Researcher — name</li>
+        <li>Pitch Lead — name</li>
+        <li>Accessibility Champion — name</li>
+      </ul>
+    </section>
+
+    <!--
+      META — GROW ROOM (NON-RENDERED, NOT A CONTENT SLOT)
+      If a contribution doesn't fit any section above, the agent (guided by SWD structural
+      proposals) may ADD a new semantic <section> here rather than dropping the work.
+      Examples of things that might land here:
+        • a designer's bonus illustration that isn't a hero / portrait / icon
+        • a pitch lead's secondary call-out
+        • a researcher's "myth-busting" panel
+        • a wildcard from software-developer-4 (e.g. animated stats counter as its own block)
+      Rules for any new section:
+        1. Semantic and accessible (proper heading hierarchy, alt text, contrast).
+        2. On-tone with the rest of the page (warm, honest, audience = UK 16-18 first-gen).
+        3. Add a matching link to the <header><nav> if it's a top-level concept.
+        4. If nothing lands here, leave this META block alone — DO NOT add an empty section.
+    -->
+
+  </main>
+
+  <footer>
+    <p>FirstGen — built at Microsoft for the Sutton Trust Workplace Safari, May 2026.</p>
+  </footer>
+</body>
+</html>

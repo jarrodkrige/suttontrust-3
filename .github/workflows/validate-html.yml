@@ -1,0 +1,31 @@
+name: Validate site HTML
+
+# Runs on PRs that touch site/. Catches broken markup before it gets merged
+# and pushed live by the Factory Agent. Educational layer: shows the team
+# that "the SDLC" has more steps than just "commit and hope".
+
+on:
+  pull_request:
+    paths:
+      - "site/**"
+      - ".github/workflows/validate-html.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  htmlhint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint@1.1.4
+
+      - name: Lint site/*.html
+        run: htmlhint --config .github/htmlhint.json "site/**/*.html"
