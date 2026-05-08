@@ -292,6 +292,17 @@ footer {
 .buddy-bio h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
 .buddy-meta { color: var(--colour-secondary); margin-bottom: var(--gap-s); font-size: 0.9375rem; }
 
+.buddy-extra {
+  margin: var(--gap-l) 0 0;
+  padding: 0;
+}
+.buddy-extra img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
 /* Resources (Researcher) */
 .resource-list {
   list-style: none;
