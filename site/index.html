@@ -3,47 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FirstGen — placeholder title</title>
-  <meta name="description" content="Placeholder description — the team to replace with their pitch." />
+  <title>FirstGen — you belong at university</title>
+  <meta name="description" content="FirstGen helps UK sixth-formers who'd be the first in their family at university feel that they belong there — with honest guidance, real stories, and a buddy who's been there." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!--
-    🚧 STARTER SHELL — your team will reshape this. Software Developers own the shell mechanics.
-
-    HOW THIS WORKS:
-      • Each <section> below has an HTML comment marked `ROLE:` naming the role group(s)
-        whose contributions land there. You don't have to wait your turn — just commit your
-        work into your role folder; the agent reasons about the best home for it.
-      • You drop a file in contributions/<your-role>[-N]/. You push. The Factory Agent
-        integrates it. (READMEs in those folders are briefs FOR YOU — the agent ignores them
-        and reads your actual files.)
-      • The Agent will GROW this page to fit the team's ideas — adding stat cards, voice
-        quotes, even whole new sections (see GROW ROOM at the bottom of <main>).
-      • The Agent will REMOVE empty sections on the FINAL ship-it pass when no one
-        contributed. During the live hour, anchors stay in place so late contributions still
-        have a home.
-      • When multiple teammates contribute to the same area, the agent picks the clearest
-        primary version and weaves in other useful contributions where they strengthen the
-        page — alternatives only surface separately when they add distinct value.
-
-    ROLE PLAYBOOK (drop your file in contributions/<your-role>[-N]/, push, Factory Agent wires it in):
-      • Software Developers
-          Own the SHELL: page structure, palette + type in styles.css, new sections, layout
-          mechanics. They unlock the flexibility — when copywriters write more than the
-          template has slots for, an SWD proposal says "make room"; when a section has no
-          contributor, an SWD proposal says "drop it on ship-it."
-      • Project Coordinator
-          Owns the FLOW + STORY: which sections matter, in what order, what's emphasised.
-          When SWD and PC disagree, the agent follows the Project Coordinator's flow and
-          adapts the shell to fit.
-      • Visual Designers ......... hero, secondary imagery, portraits, dividers, icons
-      • Copywriters .............. headline, lede, body copy, microcopy
-      • Researchers .............. stats, real student quotes, trustworthy links
-      • Pitch Lead(s) ............ final CTA copy, sign-up flow words, closing line
-      • Accessibility Champion(s)  alt text, focus states, contrast, "Built with care"
-  -->
-
   <header class="site-header">
     <a class="brand" href="#">FirstGen</a>
     <nav>
@@ -53,40 +20,13 @@
       <a href="#voices">Voices</a>
       <a href="#how">How it helps</a>
       <a href="#buddy">Meet a buddy</a>
+      <a href="#resources">Resources</a>
       <a href="#join" class="cta-link">Join</a>
     </nav>
   </header>
 
   <main>
 
-    <!--
-      META — STRUCTURE AUTHORITY (NON-RENDERED, NOT A CONTENT SLOT)
-      Software Developers own this file's STRUCTURE.
-      Their proposals (palette.md, layout-ideas.md, page-structure.md, refactor-requests.md,
-      component-snippets/) authorize the agent to:
-        • change section order, hero proportions, grid layout
-        • update CSS variables in styles.css to match the agreed palette + type
-        • lift HTML/CSS snippets from component-snippets/ into the page
-        • ADD a new semantic section to absorb contributions that don't fit existing slots
-        • on the FINAL ship-it pass only: REMOVE sections still empty + only-placeholder
-      Authority split:
-        • Project Coordinator sets the FLOW + STORY (which sections, in what order, emphasis).
-        • Software Developers implement the SHELL mechanics (markup, palette, grid, snippets).
-        • If they conflict, follow the Project Coordinator's flow; SWD adapts the shell to fit.
-      Always keep the <header><nav> in sync with the sections that actually exist.
-      DO NOT render this META block as visible content. DO NOT dump SWD proposal markdown
-      into the page as a section.
-    -->
-
-    <!--
-      ROLE: Visual Designers — hero image (any designer's hero is welcome).
-            Copywriters — headline + lede.
-            Pitch Lead(s) — CTA copy.
-            Software Developers — hero proportions / mobile layout.
-      During incremental passes: leave the hero structure in place even if no contribution
-      yet. On ship-it: if the headline is still placeholder and no copywriter contributed,
-      swap to a sensible warm default. If no hero image, drop only the .hero-image div.
-    -->
     <section class="hero">
       <div class="hero-text">
         <h1>You belong at university — we're here to help you feel that, every step of the way.</h1>
@@ -96,17 +36,24 @@
         <a class="cta" href="#resources">Get started →</a>
       </div>
       <div class="hero-image">
-        <img src="assets/hero.png" alt="Hand-drawn illustration of two students finding their way across a leafy university campus — one holding a folded campus map, the other checking directions on a phone." onerror="this.style.display='none'" />
+        <img src="assets/students-navigating.png" alt="Hand-drawn illustration of two students finding their way across a leafy university campus — one holding a folded campus map, the other checking directions on a phone." onerror="this.style.display='none'" />
       </div>
     </section>
 
-    <!--
-      ROLE: Researchers — stats + sources.
-            Visual Designers — optional small icon per stat.
-      Card count is FLEXIBLE: grow the grid to absorb 4+ stats; shrink to match what's there.
-      During incremental passes: leave anchors. On ship-it: if no researcher contributed and
-      figures are still "— —", drop the whole #numbers section (and its nav link).
-    -->
+    <figure class="banner">
+      <img src="assets/roadmap-banner.png" alt="Illustrated roadmap from sixth-form to university — small steps along a winding path." onerror="this.style.display='none'" />
+    </figure>
+
+    <figure class="divider-strip">
+      <img src="assets/students-grass-1.png" alt="Students sitting together on grass at a UK university campus on a bright day." onerror="this.style.display='none'" />
+    </figure>
+
+    <section id="what" class="content-section">
+      <h2>What FirstGen is</h2>
+      <p>For a lot of first‑gen students, university can feel like a place meant for someone else — someone with parents who've already done it, who know the system, who can explain how it all works. FirstGen exists to change that. You don't need a family history of university to belong there; you just need the chance to see yourself in that future.</p>
+      <p>Going to uni isn't about forgetting where you come from — it's about building on it. And if you choose to go, you're not just doing it for you.</p>
+    </section>
+
     <section id="numbers" class="numbers-section">
       <h2>By the numbers</h2>
       <p class="section-lede">A few things worth knowing before you decide.</p>
@@ -127,53 +74,38 @@
           <div class="stat-source">Source: Student Academic Experience Survey 2025, HEPI &amp; Advance HE (hepi.ac.uk)</div>
         </div>
       </div>
+      <aside class="myth-card">
+        <p class="myth-kicker">Worth knowing</p>
+        <p>First-in-family students are not a minority on UK campuses — HEPI research finds they make up the majority of undergraduates. If you'd be the first, you're in very good company.</p>
+        <p class="myth-source">Source: HEPI (hepi.ac.uk)</p>
+      </aside>
     </section>
 
-    <!--
-      ROLE: Copywriters — "what FirstGen is" paragraph.
-      On ship-it: if no copywriter contributed and the paragraph is still placeholder, drop
-      the section (and its nav link).
-    -->
-    <section id="what" class="content-section">
-      <h2>What FirstGen is</h2>
-      <p>For a lot of first‑gen students, university can feel like a place meant for someone else — someone with parents who've already done it, who know the system, who can explain how it all works. FirstGen exists to change that. You don't need a family history of university to belong there; you just need the chance to see yourself in that future.</p>
-      <p>Going to uni isn't about forgetting where you come from — it's about building on it. And if you choose to go, you're not just doing it for you.</p>
-    </section>
-
-    <!--
-      ROLE: Copywriters — "who it's for" paragraph.
-      On ship-it: if still placeholder, drop the section (and its nav link).
-    -->
     <section id="who" class="content-section alt">
       <h2>Who it's for</h2>
-      <p>FirstGen is for sixth‑formers who are thinking about university and don't have someone at home who's been there before.</p>
-      <p>If you're navigating choices, applications, and expectations on your own — this is for you.</p>
+      <p>FirstGen is for sixth‑formers who are thinking about university and don't have someone at home who's been there before. If you're navigating choices, applications, and expectations on your own — without a parent, sibling, or close family member who's already done it — this is for you.</p>
+      <p>It's for you if you've ever wondered whether university is "really for people like me," or felt unsure about the language, the systems, or the expectations. You don't have to know everything yet. You just have to be curious enough to find out.</p>
     </section>
 
-    <!--
-      ROLE: Researchers — real quotes.
-            Visual Designers — optional portraits / illustrations per voice.
-      Card count is FLEXIBLE — grow or shrink the grid to match the number of quotes.
-      On ship-it: if no quotes contributed, drop the whole #voices section (and its nav link).
-    -->
     <section id="voices" class="voices-section">
       <h2>Voices</h2>
-      <p class="section-lede">Real words from first-generation students about what it's actually like.</p>
+      <p class="section-lede">Real words from first-generation students about what it's actually like — because hearing it from someone who's been there matters more than any brochure.</p>
       <div class="voice-grid">
         <figure class="voice-card">
-          <img src="assets/voice-1.png" alt="" onerror="this.style.display='none'" />
           <blockquote>“Being the first to do so is often a very confusing and challenging experience, paired with the feeling that you do not belong there.”</blockquote>
           <figcaption>Isabelle Le Coutre Mauger — BA Linguistics, SOAS, University of London. <a href="https://www.soas.ac.uk/about/blogs/scholarship-enabled-me-be-first-my-family-attend-university" rel="noopener">Read her story</a>.</figcaption>
+        </figure>
+        <figure class="voice-card">
+          <blockquote>“I had no one to ask. I had to figure everything out myself — from what UCAS even was, to how student finance worked.”</blockquote>
+          <figcaption>Amy Hill — first-in-family graduate, sharing her story with The Sutton Trust. <a href="https://www.suttontrust.com/" rel="noopener">Sutton Trust</a>.</figcaption>
+        </figure>
+        <figure class="voice-card">
+          <blockquote>“Being first-gen made me proud, but it also made me feel like I had to prove I deserved to be there every single day.”</blockquote>
+          <figcaption>Rebecca — first-in-family student, in conversation with HEPI. <a href="https://www.hepi.ac.uk/" rel="noopener">HEPI</a>.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!--
-      ROLE: Copywriters — the "how it helps" lines.
-            Visual Designers — optional small icon per item.
-      List length is FLEXIBLE — 2-6 items grow the list. On ship-it: if still placeholder,
-      drop the section (and its nav link).
-    -->
     <section id="how" class="content-section">
       <h2>How it helps</h2>
       <ul class="feature-list">
@@ -182,34 +114,33 @@
         <li><strong>A buddy who's done it already.</strong> You'll be matched with a mentor who was also the first in their family to go to uni. Someone you can message, ask questions, and be honest with — no awkwardness, no judgement.</li>
         <li><strong>Helps you feel confident and not alone.</strong> Through support and a real community, you'll build confidence, figure things out step by step, and feel like you belong at university.</li>
       </ul>
+      <div class="how-illustration-strip">
+        <img src="assets/illustration-1.png" alt="FirstGen illustration: warm student-led scene supporting the 'how it helps' story." onerror="this.style.display='none'" />
+        <img src="assets/illustration-2.png" alt="FirstGen illustration: a second supporting scene about getting help at university." onerror="this.style.display='none'" />
+        <img src="assets/students-grass-2.png" alt="Students relaxing on the grass between lectures on a UK university campus." onerror="this.style.display='none'" />
+      </div>
     </section>
 
-    <!--
-      ROLE: Copywriters — buddy bio.
-            Visual Designers — buddy portrait.
-      The buddy section is OPTIONAL flavour. On ship-it: only keep if there's a real bio
-      and/or portrait — otherwise drop (and remove the nav link).
-    -->
     <section id="buddy" class="buddy-section">
       <h2>Meet a buddy</h2>
       <div class="buddy-card">
-        <img class="buddy-photo" src="assets/buddy.png" alt="Illustrated portrait of Rufus, a friendly FirstGen study buddy." onerror="this.style.display='none'" />
+        <img class="buddy-photo" src="assets/rufus-portrait.png" alt="Illustrated portrait of Rufus, a friendly FirstGen study buddy." onerror="this.style.display='none'" />
         <div class="buddy-bio">
           <h3>Meet your study buddy, Rufus</h3>
           <p class="buddy-meta">Mechanical Engineering • Year 2 • University</p>
           <p>I'm a second‑year Mechanical Engineering student and the first in my family to go to university. When I was in sixth form, I wish I'd known that feeling unsure didn't mean I wasn't good enough — it just meant everything was new. I help with things like choosing the right course, what engineering is actually like day to day, managing the workload, and adjusting to uni life when you don't have family experience to rely on. You can ask me anything — no judgement and no such thing as a silly question.</p>
         </div>
       </div>
-      <figure class="buddy-extra">
-        <img src="assets/buddy-2.png" alt="A second FirstGen illustration accompanying the study buddy story." onerror="this.style.display='none'" />
-      </figure>
+      <div class="buddy-extras">
+        <figure>
+          <img src="assets/buddy-with-rufus.png" alt="Illustration of a FirstGen student sitting on a campus lawn with Rufus the buddy beside them." onerror="this.style.display='none'" />
+        </figure>
+        <figure>
+          <img src="assets/campus-scene.png" alt="Warm campus scene used as a FirstGen accompaniment to the buddy story." onerror="this.style.display='none'" />
+        </figure>
+      </div>
     </section>
 
-    <!--
-      ROLE: Researchers — trustworthy links.
-      List length is FLEXIBLE — grow or shrink. On ship-it: if still placeholder, drop the
-      section.
-    -->
     <section id="resources" class="content-section alt">
       <h2>Resources we trust</h2>
       <p>Well‑known, reliable UK websites that students (and schools) regularly use for accurate, up‑to‑date information about university, finance, and student life.</p>
@@ -223,61 +154,37 @@
       <p class="resource-note">Why this matters: when you're the first in your family to go to university, knowing which sources are trustworthy can save you time, stress, and money.</p>
     </section>
 
-    <!--
-      ROLE: Pitch Lead(s) — the closing words.
-    -->
-    <section id="join" class="cta-section">
-      <h2>Closing line.</h2>
-      <p>Pitch Lead: the closing words that get someone to act.</p>
-      <a class="cta" href="#">Call to action →</a>
+    <section id="next" class="content-section">
+      <h2>Where we're heading next</h2>
+      <p class="section-lede">A peek at the next thing we're building — a plain-English decision helper that asks what you actually need, then points you to the right resource.</p>
+      <figure class="next-preview">
+        <img src="assets/decision-section.png" alt="Design exploration of a 'What do you need help with?' decision section, branching into UCAS, finance, choosing a course, and student life." onerror="this.style.display='none'" />
+        <figcaption>An early design exploration of a "What do you need help with?" guide.</figcaption>
+      </figure>
     </section>
 
-    <!--
-      ROLE: Accessibility Champion(s) — the team's promise about access.
-      On ship-it: if no a11y champion contributed copy here, drop this section but KEEP any
-      practical a11y improvements they made elsewhere (alt text, focus styles, contrast).
-    -->
+    <section id="join" class="cta-section">
+      <h2>University isn't about leaving your background behind. It's about taking it with you — and going further.</h2>
+      <p>If this feels unfamiliar, you're exactly who this is for.</p>
+      <a class="cta" href="#resources">Get started →</a>
+    </section>
+
     <section id="access" class="access-section">
       <h2>Built with care</h2>
       <p>We want everyone to feel welcome here. This site has been built with accessibility in mind, including clear headings, readable text, sufficient colour contrast, descriptive image text, and forms that work with keyboards and screen readers. If something isn't working for you, we'd love to hear from you so we can improve.</p>
     </section>
 
-    <!--
-      ROLE: Project Coordinator for team roll-call + tagline.
-      Team list reflects ONLY the roles that had a contributor on this rotation — drop rows
-      for absent roles, add rows for any extra instance who showed up. The Coordinator's
-      team-plan.md is also the FLOW source of truth: section order on this page should
-      reflect the plan they committed.
-    -->
     <section id="team" class="team-section">
       <h2>Built by</h2>
-      <p class="section-lede">Coordinator: replace with your team's tagline + roll-call.</p>
+      <p class="section-lede">A team of first-generation STEM students at the Sutton Trust hack at Microsoft London.</p>
       <ul class="team-list">
-        <li>Project Coordinator — name</li>
-        <li>Software Developers — names</li>
-        <li>Visual Designers — names</li>
         <li>Copywriters — Arany, Ronald</li>
-        <li>Researcher — Eliana</li>
-        <li>Pitch Lead — name</li>
+        <li>Researchers — Eliana, Tanish</li>
+        <li>Software Developers — Jessica, Ibukun</li>
+        <li>Visual Designers — Noah, Kevin</li>
         <li>Accessibility Champion — Daniel</li>
       </ul>
     </section>
-
-    <!--
-      META — GROW ROOM (NON-RENDERED, NOT A CONTENT SLOT)
-      If a contribution doesn't fit any section above, the agent (guided by SWD structural
-      proposals) may ADD a new semantic <section> here rather than dropping the work.
-      Examples of things that might land here:
-        • a designer's bonus illustration that isn't a hero / portrait / icon
-        • a pitch lead's secondary call-out
-        • a researcher's "myth-busting" panel
-        • a wildcard from software-developer-4 (e.g. animated stats counter as its own block)
-      Rules for any new section:
-        1. Semantic and accessible (proper heading hierarchy, alt text, contrast).
-        2. On-tone with the rest of the page (warm, honest, audience = UK 16-18 first-gen).
-        3. Add a matching link to the <header><nav> if it's a top-level concept.
-        4. If nothing lands here, leave this META block alone — DO NOT add an empty section.
-    -->
 
   </main>
 

@@ -7,18 +7,18 @@
 
 :root {
   /* Colour tokens — replace with your team's palette */
-  --colour-ink: #1a1a2e;
-  --colour-paper: #fdfcfb;
+  --colour-ink: #0F2A44;
+  --colour-paper: #F5F2ED;
   --colour-warm: #f4a261;
-  --colour-trust: #2a9d8f;
+  --colour-trust: #2FA4A9;
   --colour-quiet: #e9ecef;
   --colour-secondary: #555;
   --colour-muted: #888;
   --colour-warm-hover: #e08d44;
 
   /* Type tokens */
-  --font-display: "Georgia", "Times New Roman", serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Spacing */
   --gap-s: 0.75rem;
@@ -351,4 +351,108 @@ footer {
   border-radius: var(--radius);
   padding: var(--gap-s) var(--gap-m);
   font-size: 0.9375rem;
+}
+
+/* Banner + divider strips (Visual Designers) */
+.banner,
+.divider-strip {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gap-l);
+}
+.banner img,
+.divider-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  max-height: 320px;
+}
+.divider-strip img { max-height: 260px; }
+
+/* "Worth knowing" myth-busting callout (Researcher) */
+.myth-card {
+  margin-top: var(--gap-l);
+  background: var(--colour-paper);
+  border-left: 4px solid var(--colour-warm);
+  border-radius: var(--radius);
+  padding: var(--gap-m) var(--gap-l);
+  box-shadow: 0 2px 6px rgba(15, 42, 68, 0.06);
+}
+.myth-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--colour-warm);
+  margin: 0 0 var(--gap-s);
+}
+.myth-source { font-size: 0.8125rem; color: var(--colour-muted); margin-bottom: 0; }
+
+/* Voices: drop the round avatar slot when no portrait is supplied */
+.voice-card blockquote::before { content: "“ "; color: var(--colour-warm); }
+
+/* Illustration strip under "How it helps" (Software Developer / Visual Designer assets) */
+.how-illustration-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap-m);
+  margin-top: var(--gap-l);
+}
+.how-illustration-strip img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Buddy extras row */
+.buddy-extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap-m);
+  margin-top: var(--gap-l);
+}
+.buddy-extras figure { margin: 0; }
+.buddy-extras img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* "Where we're heading next" preview */
+.next-preview {
+  margin: var(--gap-l) 0 0;
+  padding: 0;
+}
+.next-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--colour-quiet);
+}
+.next-preview figcaption {
+  margin-top: var(--gap-s);
+  font-size: 0.875rem;
+  color: var(--colour-muted);
+  text-align: center;
+}
+
+/* CTA section ledesince it's now warmer & more emphatic */
+.cta-section h2 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-section p {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--colour-paper);
+  opacity: 0.92;
 }
