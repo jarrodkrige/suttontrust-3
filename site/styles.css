@@ -44,6 +44,13 @@
 
 * { box-sizing: border-box; }
 
+/* Smooth in-page anchor scrolling (e.g. hero "Get started" → Resources).
+   Honour users who prefer reduced motion by falling back to instant jumps. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 html, body {
   margin: 0;
   padding: 0;
