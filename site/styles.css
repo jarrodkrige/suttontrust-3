@@ -298,6 +298,11 @@ footer {
   border-radius: var(--radius);
   padding: var(--gap-m);
 }
+.resource-note {
+  margin-top: var(--gap-m);
+  font-style: italic;
+  color: var(--colour-muted, inherit);
+}
 
 /* Built with care (A11y) */
 .access-section {
